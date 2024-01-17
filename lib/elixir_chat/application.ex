@@ -9,7 +9,7 @@ defmodule ElixirChat.Application do
   def start(_type, _args) do
     children = [
       ElixirChatWeb.Telemetry,
-      ElixirChat.Repo,
+      # ElixirChat.Repo,
       {DNSCluster, query: Application.get_env(:elixir_chat, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ElixirChat.PubSub},
       # Start the Finch HTTP client for sending emails

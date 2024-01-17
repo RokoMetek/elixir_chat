@@ -8,7 +8,7 @@
 import Config
 
 config :elixir_chat,
-  ecto_repos: [ElixirChat.Repo],
+  # ecto_repos: [ElixirChat.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
