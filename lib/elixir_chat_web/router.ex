@@ -1,4 +1,6 @@
 defmodule ElixirChatWeb.Router do
+  # alias ElixirChatWeb.ChatLive
+  # alias ElixirChatWeb.ChatLive
   use ElixirChatWeb, :router
 
   pipeline :browser do
@@ -18,6 +20,7 @@ defmodule ElixirChatWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/chat", ChatLive.Index, :index
   end
 
   # Other scopes may use custom stacks.
